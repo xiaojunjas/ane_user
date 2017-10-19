@@ -22,11 +22,11 @@ public interface RoleDao {
 	
 	public Integer saveRole(Role role);
 	
-	/*public Integer updateRole(Role role);
+	public Integer updateRole(Role role);
 	
 	public Integer updateRoleSelected(Role role);
 
-	public void updateListUserRoleIsDeleted(@Param("refId")Long refId);
+	/*public void updateListUserRoleIsDeleted(@Param("refId")Long refId);
 
 	public void updateListRolePermissionIsDeleted(@Param("refId")Long refId);
 

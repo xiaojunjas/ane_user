@@ -52,7 +52,7 @@
 		VALUES (#{name},#{type}, #{remark});
 	</insert>
 	
-	<!-- <insert id="updateRole">
+	<insert id="updateRole">
 		UPDATE role_t
 			SET
 				name=#{name},
@@ -71,7 +71,7 @@
 			WHERE id = #{id}
 	</insert>
 	
-	<update id="updateListUserRoleIsDeleted">
+	<!-- <update id="updateListUserRoleIsDeleted">
 		UPDATE user_role_t SET is_deleted=0 WHERE type =1 and ref_id = #{refId}
 	</update>
 	

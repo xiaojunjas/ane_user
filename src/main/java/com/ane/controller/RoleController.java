@@ -1,15 +1,12 @@
 package com.ane.controller;
 
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ane.dao.RoleDao;
@@ -37,7 +34,7 @@ public class RoleController {
 		return roleDao.findRoles(query, start, limit);
 	}
 	
-	/*@RequestMapping(value="/roles", method=RequestMethod.POST)
+	@RequestMapping(value="/roles", method=RequestMethod.POST)
 	public Long saveRole(@RequestBody Role role){
 		roleDao.saveRole(role);
 		return role.getId();
@@ -53,7 +50,7 @@ public class RoleController {
 		return roleDao.updateRoleSelected(role);
 	}
 	
-	@RequestMapping(value="/roles", method=RequestMethod.DELETE)
+	/*@RequestMapping(value="/roles", method=RequestMethod.DELETE)
 	public Integer deleteRole(@RequestParam("id") Long id){
 		Role role = new Role();
 		role.setId(id);
