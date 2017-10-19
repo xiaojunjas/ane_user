@@ -1,0 +1,49 @@
+server:
+    port: 1002
+
+mybatis:
+    mapperLocations: classpath:/com/gclasscn/user/mapper/*.xml
+    typeAliasesPackage: com.ane.domain
+
+logging:
+    level:
+        root: INFO
+        com:
+            gclasscn:
+                user:
+                   dao: DEBUG
+    file: logs/ane-user.log
+
+database:
+    host: 127.0.0.1
+    port: 3306
+    name: user
+
+---
+spring:
+    profiles: default
+    datasource:
+        initialize: false
+        url: jdbc:mysql://${database.host}:${database.port}/${database.name}?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+        username: root
+        password: root
+        driver-class-name: com.mysql.jdbc.Driver
+        maxActive: 1000
+        initialSize: 10
+        maxWait: 60000
+        minIdle: 5
+        test-on-borrow: true 
+        test-on-return: true
+        validation-query: SELECT 1
+    http:
+        multipart:
+            max-file-size: 5120Mb
+            max-request-size: 5120Mb
+
+---
+spring:
+    profiles: test
+    datasource:
+      driverClassName: org.h2.Driver
+      url: jdbc:h2:mem:ane_user;MODE=MySQL
+

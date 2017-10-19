@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ane.dao.UserDao">
+
+	 <sql id="userSql">
+		u.id,
+		u.login_name as account,
+		u.password,
+		u.avatar,
+		u.type,
+		u.name,
+		u.telephone,
+		u.status,
+	 	u.create_time as createTime,
+	 	u.is_deleted as isDeleted
+	 </sql>
+	  
+	<select id="getUserByAccount" resultType="User">
+		select <include refid="userSql" /> from user_t u where login_name = #{account}
+	</select>
+	
+	<select id="getUserByUserId" resultType="User">
+		select <include refid="userSql" /> from user_t u where id = #{userId}
+	</select>
+	
+	<insert id="createUser">
+		insert into user_t (name,password,sex,is_deleted) values(#{name},#{password},"男",0)
+	</insert>
+	
+	<select id="loginName" resultType="java.lang.Integer">
+		 select count(1) from user_t where login_name = #{loginName} and password = #{password}
+	</select>
+	 
+	<select id="listUser" resultType="User">
+		select <include refid="userSql" /> from user_t u where is_deleted = 0 
+		<if test="query != null and query !=''">
+		  and (
+				u.login_name like concat("%", #{query}, "%")
+				or u.telephone like concat("%", #{query}, "%")
+			 )
+		</if>
+		limit #{start}, #{limit}
+	</select>
+	
+	<select id="countListUser" resultType="java.lang.Integer">
+		select count(1) from user_t u where is_deleted = 0
+		<if test="query != null and query !=''">
+		  and (
+				u.login_name like concat("%", #{query}, "%")
+				or u.telephone like concat("%", #{query}, "%")
+			 )
+		</if>
+	</select>
+	
+	<update id="delUserByUserId">
+		update user_t set is_deleted = 1 where id = #{userId} 
+	</update>
+	
+	<update id="editUserByUserId">
+		update user_t set 
+				name = #{name},
+				email = #{email},
+				photo = #{photo},
+				password = #{password},
+				sex = #{sex},
+				phone = #{phone},
+				address = #{address} 
+		where
+				id = #{id}
+	</update>
+	
+	<select id="loginUser" resultType="java.lang.Integer">
+		select count(1) from user_t where is_deleted = 0 and name = #{name} and password =#{password}
+	</select>
+	
+</mapper>
+
