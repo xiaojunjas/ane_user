@@ -71,20 +71,4 @@
 			WHERE id = #{id}
 	</insert>
 	
-	<!-- <update id="updateListUserRoleIsDeleted">
-		UPDATE user_role_t SET is_deleted=0 WHERE type =1 and ref_id = #{refId}
-	</update>
-	
-	<update id="updateListRolePermissionIsDeleted">
-		UPDATE role_permission_t SET is_deleted=0 WHERE type =1 and ref_id = #{refId}
-	</update>
-	
-		<update id="updateListUserRoleRefId">
-		UPDATE user_role_t SET ref_id = #{newRefId} WHERE type =1 and ref_id = #{oldRefId}
-	</update>
-	
-	<update id="updateListRolePermissionRefId">
-		UPDATE role_permission_t SET ref_id = #{newRefId} WHERE type =1 and ref_id = #{oldRefId}
-	</update> -->
-	
 </mapper>

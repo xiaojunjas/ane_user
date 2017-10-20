@@ -26,10 +26,6 @@
 	<insert id="createUser">
 		insert into user_t (name,password,sex,is_deleted) values(#{name},#{password},"男",0)
 	</insert>
-	
-	<select id="loginName" resultType="java.lang.Integer">
-		 select count(1) from user_t where login_name = #{loginName} and password = #{password}
-	</select>
 	 
 	<select id="listUser" resultType="User">
 		select <include refid="userSql" /> from user_t u where is_deleted = 0 
@@ -68,10 +64,6 @@
 		where
 				id = #{id}
 	</update>
-	
-	<select id="loginUser" resultType="java.lang.Integer">
-		select count(1) from user_t where is_deleted = 0 and name = #{name} and password =#{password}
-	</select>
 	
 </mapper>
 

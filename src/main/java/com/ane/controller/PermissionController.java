@@ -5,7 +5,6 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -36,20 +35,9 @@ public class PermissionController {
 	@Autowired
 	private UserDao userDao;
 	
-	@RequestMapping(value="/permissions/{id}", method=RequestMethod.GET)
-	public Permission getPermissionById(@PathVariable("id")Long id){
-		return permissionDao.getPermissionById(id);
-	}
-	
-	
 	@RequestMapping(value="/permissions/pid", method=RequestMethod.GET)
 	public List<Permission> findPermissionsByPId(Long pid){
 		return permissionDao.findPermissionsByPId(pid);
-	}
-	
-	@RequestMapping(value="/permissions/list", method=RequestMethod.GET)
-	public List<Permission> findPermissionsPathAndLeaf(String path,Integer leaf){
-		return permissionDao.findPermissionsPathAndLeaf(path,leaf);
 	}
 	
 	@RequestMapping(value="/permissions/user", method=RequestMethod.GET)
@@ -59,35 +47,31 @@ public class PermissionController {
 		List<Permission> perms = permissionDao.findPermissionsPathAndLeaf(path,null);
 		if("admin".equals(user.getAccount())) return perms;
 	
-		List<UserRole> userRoles = userRoleDao.findRolePermissionByUserId(user.getId());
+		List<UserRole> userRoles = userRoleDao.findRolePermissionByUserId(user.getId(),null);
 		List<Long> roleIds = Lists.newArrayList();
-		List<Long> orgIds = Lists.newArrayList();
+//		List<Long> orgIds = Lists.newArrayList();
 		for (UserRole userRole : userRoles) {
-			if(userRole.getType().equals(0)) roleIds.add(userRole.getRefId());
-			else if(userRole.getType().equals(1)) orgIds.add(userRole.getRefId());
+			if(userRole.getType().equals(1)){
+				roleIds.add(userRole.getRefId());
+			} /*else if(userRole.getType().equals(1)){
+				orgIds.add(userRole.getRefId());
+			} */
 		}
 		
 		//个人权限校验
 		Long[] userIds = {userId};
 		List<RolePermission> myRolePerms =rolePermissionDao.findRolePermissions(2, userIds);
 		
-		/*//组织权限校验
-		if(orgIds.size()>0){
-			List<RolePermission> orgPerms = rolePermissionDao.findRolePermissions(1L, 1, orgIds.toArray(new Long[]{}));
-			myRolePerms.addAll(orgPerms);
-		}*/
-				
 		//角色权限校验
-		if(roleIds.size()>0){
-			List<RolePermission> rolePerms = rolePermissionDao.findRolePermissions(0, roleIds.toArray(new Long[]{}));
+		/*if(roleIds.size()>0){
+			List<RolePermission> rolePerms = rolePermissionDao.findRolePermissions(1, roleIds.toArray(new Long[]{}));
 			myRolePerms.addAll(rolePerms);
-		}
+		}*/
 		
 		Set<Long> panelRolePermIdSet = myRolePerms.stream().collect(Collectors.mapping(RolePermission::getPermissionId, Collectors.toSet()));
 		perms = perms.stream().filter(item->panelRolePermIdSet.contains(item.getId())).collect(Collectors.toList());
 	
 		return perms;
 	}
-	
 
 }

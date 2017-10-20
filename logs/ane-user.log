@@ -2133,3 +2133,667 @@ org.apache.ibatis.binding.BindingException: Parameter 'name' not found. Availabl
 2017-10-19 19:54:46.333  INFO 9720 --- [http-nio-1002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
 2017-10-19 19:54:46.336  INFO 9720 --- [http-nio-1002-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
 2017-10-19 19:54:46.392  INFO 9720 --- [http-nio-1002-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 56 ms
+2017-10-20 09:57:36.461  INFO 10940 --- [main] com.ane.Application                      : Starting Application on DESKTOP-ERCUHFH with PID 10940 (F:\worspecke\ane_user\target\classes started by xiaojun in F:\worspecke\ane_user)
+2017-10-20 09:57:36.469  INFO 10940 --- [main] com.ane.Application                      : No active profile set, falling back to default profiles: default
+2017-10-20 09:57:36.596  INFO 10940 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@22bac7bc: startup date [Fri Oct 20 09:57:36 CST 2017]; root of context hierarchy
+2017-10-20 09:57:38.692  INFO 10940 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dfe3bd3f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-10-20 09:57:39.481  INFO 10940 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 1002 (http)
+2017-10-20 09:57:39.502  INFO 10940 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-10-20 09:57:39.504  INFO 10940 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2017-10-20 09:57:39.649  INFO 10940 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-10-20 09:57:39.650  INFO 10940 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3057 ms
+2017-10-20 09:57:40.111  INFO 10940 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-10-20 09:57:40.116  INFO 10940 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2017-10-20 09:57:40.116  INFO 10940 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-10-20 09:57:40.117  INFO 10940 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-10-20 09:57:40.117  INFO 10940 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-10-20 09:57:40.118  INFO 10940 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-10-20 09:57:40.118  INFO 10940 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2017-10-20 09:57:40.119  INFO 10940 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2017-10-20 09:57:41.497  INFO 10940 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@22bac7bc: startup date [Fri Oct 20 09:57:36 CST 2017]; root of context hierarchy
+2017-10-20 09:57:41.601  INFO 10940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/permissions/list],methods=[GET]}" onto public java.util.List<com.ane.domain.Permission> com.ane.controller.PermissionController.findPermissionsPathAndLeaf(java.lang.String,java.lang.Integer)
+2017-10-20 09:57:41.603  INFO 10940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/permissions/{id}],methods=[GET]}" onto public com.ane.domain.Permission com.ane.controller.PermissionController.getPermissionById(java.lang.Long)
+2017-10-20 09:57:41.605  INFO 10940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/permissions/user],methods=[GET]}" onto public java.util.List<com.ane.domain.Permission> com.ane.controller.PermissionController.findMyPerMissions(java.lang.String,java.lang.Long)
+2017-10-20 09:57:41.606  INFO 10940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/permissions/pid],methods=[GET]}" onto public java.util.List<com.ane.domain.Permission> com.ane.controller.PermissionController.findPermissionsByPId(java.lang.Long)
+2017-10-20 09:57:41.610  INFO 10940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles],methods=[PATCH]}" onto public java.lang.Integer com.ane.controller.RoleController.updateRoleSelected(com.ane.domain.Role)
+2017-10-20 09:57:41.611  INFO 10940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles/{id}],methods=[GET]}" onto public com.ane.domain.Role com.ane.controller.RoleController.getRoleById(java.lang.Long)
+2017-10-20 09:57:41.611  INFO 10940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles/count],methods=[GET]}" onto public java.lang.Integer com.ane.controller.RoleController.countRoles(java.lang.String)
+2017-10-20 09:57:41.612  INFO 10940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles],methods=[PUT]}" onto public java.lang.Integer com.ane.controller.RoleController.updateRole(com.ane.domain.Role)
+2017-10-20 09:57:41.612  INFO 10940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles],methods=[POST]}" onto public java.lang.Long com.ane.controller.RoleController.saveRole(com.ane.domain.Role)
+2017-10-20 09:57:41.613  INFO 10940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles],methods=[GET]}" onto public java.util.List<com.ane.domain.Role> com.ane.controller.RoleController.findRoles(java.lang.String,java.lang.Integer,java.lang.Integer)
+2017-10-20 09:57:41.615  INFO 10940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/rolePermissions/batch],methods=[POST]}" onto public java.lang.Integer com.ane.controller.RolePermissionController.saveRolePermissions(java.util.List<com.ane.domain.RolePermission>)
+2017-10-20 09:57:41.616  INFO 10940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/rolePermissions],methods=[POST]}" onto public java.lang.Long com.ane.controller.RolePermissionController.saveRolePermissions(com.ane.domain.RolePermission)
+2017-10-20 09:57:41.617  INFO 10940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/rolePermissions],methods=[GET]}" onto public java.util.List<com.ane.domain.RolePermission> com.ane.controller.RolePermissionController.findRolePermissions(java.lang.Integer,java.lang.Long...)
+2017-10-20 09:57:41.617  INFO 10940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/rolePermissions],methods=[DELETE]}" onto public java.lang.Integer com.ane.controller.RolePermissionController.removeRolePermissionsByRefId(java.lang.Long[],java.lang.Integer,java.lang.Long)
+2017-10-20 09:57:41.628  INFO 10940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/id],methods=[GET]}" onto public com.ane.domain.User com.ane.controller.UserController.getUserByUserId(java.lang.Long)
+2017-10-20 09:57:41.629  INFO 10940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/account],methods=[GET]}" onto public com.ane.domain.User com.ane.controller.UserController.getUserByAccount(java.lang.String)
+2017-10-20 09:57:41.630  INFO 10940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/users],methods=[GET]}" onto public java.util.List<com.ane.domain.User> com.ane.controller.UserController.listUser(java.lang.Integer,java.lang.Integer,java.lang.String)
+2017-10-20 09:57:41.631  INFO 10940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/userId],methods=[PUT]}" onto public java.lang.Integer com.ane.controller.UserController.editUserByUserId(com.ane.domain.User)
+2017-10-20 09:57:41.631  INFO 10940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/create],methods=[POST]}" onto public java.lang.Integer com.ane.controller.UserController.createUser(java.lang.String,java.lang.String)
+2017-10-20 09:57:41.634  INFO 10940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/login],methods=[GET]}" onto public java.lang.Integer com.ane.controller.UserController.loginUser(java.lang.String,java.lang.String)
+2017-10-20 09:57:41.634  INFO 10940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/users/count],methods=[GET]}" onto public java.lang.Integer com.ane.controller.UserController.countListUser(java.lang.String)
+2017-10-20 09:57:41.634  INFO 10940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/userId],methods=[DELETE]}" onto public java.lang.Integer com.ane.controller.UserController.delUserByUserId(java.lang.Long)
+2017-10-20 09:57:41.637  INFO 10940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-20 09:57:41.638  INFO 10940 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-20 09:57:41.697  INFO 10940 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-20 09:57:41.697  INFO 10940 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-20 09:57:41.779  INFO 10940 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-20 09:57:42.337  INFO 10940 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2017-10-20 09:57:42.340  INFO 10940 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 09:57:42.342  INFO 10940 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 09:57:42.344  INFO 10940 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2017-10-20 09:57:42.344  INFO 10940 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 09:57:42.345  INFO 10940 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 09:57:42.347  INFO 10940 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 09:57:42.349  INFO 10940 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2017-10-20 09:57:42.350  INFO 10940 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 09:57:42.351  INFO 10940 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 09:57:42.355  INFO 10940 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 09:57:42.357  INFO 10940 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2017-10-20 09:57:42.358  INFO 10940 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2017-10-20 09:57:42.359  INFO 10940 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 09:57:42.896  INFO 10940 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-10-20 09:57:42.909  INFO 10940 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2017-10-20 09:57:43.357  INFO 10940 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 1002 (http)
+2017-10-20 09:57:43.364  INFO 10940 --- [main] com.ane.Application                      : Started Application in 7.58 seconds (JVM running for 8.277)
+2017-10-20 10:00:06.081  INFO 10940 --- [http-nio-1002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-10-20 10:00:06.081  INFO 10940 --- [http-nio-1002-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-10-20 10:00:06.238  INFO 10940 --- [http-nio-1002-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 156 ms
+2017-10-20 10:41:49.584  INFO 13480 --- [main] com.ane.Application                      : Starting Application on DESKTOP-ERCUHFH with PID 13480 (F:\worspecke\ane_user\target\classes started by xiaojun in F:\worspecke\ane_user)
+2017-10-20 10:41:49.592  INFO 13480 --- [main] com.ane.Application                      : No active profile set, falling back to default profiles: default
+2017-10-20 10:41:49.711  INFO 13480 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@22bac7bc: startup date [Fri Oct 20 10:41:49 CST 2017]; root of context hierarchy
+2017-10-20 10:41:52.104  INFO 13480 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d31d1e19] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-10-20 10:41:53.088  INFO 13480 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 1002 (http)
+2017-10-20 10:41:53.108  INFO 13480 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-10-20 10:41:53.110  INFO 13480 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2017-10-20 10:41:53.248  INFO 13480 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-10-20 10:41:53.248  INFO 13480 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3566 ms
+2017-10-20 10:41:53.719  INFO 13480 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-10-20 10:41:53.726  INFO 13480 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2017-10-20 10:41:53.726  INFO 13480 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-10-20 10:41:53.727  INFO 13480 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-10-20 10:41:53.727  INFO 13480 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-10-20 10:41:53.727  INFO 13480 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-10-20 10:41:53.727  INFO 13480 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2017-10-20 10:41:53.728  INFO 13480 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2017-10-20 10:41:55.461  INFO 13480 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@22bac7bc: startup date [Fri Oct 20 10:41:49 CST 2017]; root of context hierarchy
+2017-10-20 10:41:55.593  INFO 13480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/permissions/pid],methods=[GET]}" onto public java.util.List<com.ane.domain.Permission> com.ane.controller.PermissionController.findPermissionsByPId(java.lang.Long)
+2017-10-20 10:41:55.595  INFO 13480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/permissions/user],methods=[GET]}" onto public java.util.List<com.ane.domain.Permission> com.ane.controller.PermissionController.findMyPerMissions(java.lang.String,java.lang.Long)
+2017-10-20 10:41:55.598  INFO 13480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles],methods=[PUT]}" onto public java.lang.Integer com.ane.controller.RoleController.updateRole(com.ane.domain.Role)
+2017-10-20 10:41:55.599  INFO 13480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles],methods=[GET]}" onto public java.util.List<com.ane.domain.Role> com.ane.controller.RoleController.findRoles(java.lang.String,java.lang.Integer,java.lang.Integer)
+2017-10-20 10:41:55.600  INFO 13480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles/{id}],methods=[GET]}" onto public com.ane.domain.Role com.ane.controller.RoleController.getRoleById(java.lang.Long)
+2017-10-20 10:41:55.602  INFO 13480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles/count],methods=[GET]}" onto public java.lang.Integer com.ane.controller.RoleController.countRoles(java.lang.String)
+2017-10-20 10:41:55.604  INFO 13480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles],methods=[POST]}" onto public java.lang.Long com.ane.controller.RoleController.saveRole(com.ane.domain.Role)
+2017-10-20 10:41:55.604  INFO 13480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles],methods=[PATCH]}" onto public java.lang.Integer com.ane.controller.RoleController.updateRoleSelected(com.ane.domain.Role)
+2017-10-20 10:41:55.606  INFO 13480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/rolePermissions],methods=[DELETE]}" onto public java.lang.Integer com.ane.controller.RolePermissionController.removeRolePermissionsByRefId(java.lang.Long[],java.lang.Integer,java.lang.Long)
+2017-10-20 10:41:55.607  INFO 13480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/rolePermissions/batch],methods=[POST]}" onto public java.lang.Integer com.ane.controller.RolePermissionController.saveRolePermissions(java.util.List<com.ane.domain.RolePermission>)
+2017-10-20 10:41:55.608  INFO 13480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/rolePermissions],methods=[GET]}" onto public java.util.List<com.ane.domain.RolePermission> com.ane.controller.RolePermissionController.findRolePermissions(java.lang.Integer,java.lang.Long...)
+2017-10-20 10:41:55.619  INFO 13480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/id],methods=[GET]}" onto public com.ane.domain.User com.ane.controller.UserController.getUserByUserId(java.lang.Long)
+2017-10-20 10:41:55.620  INFO 13480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/userId],methods=[DELETE]}" onto public java.lang.Integer com.ane.controller.UserController.delUserByUserId(java.lang.Long)
+2017-10-20 10:41:55.620  INFO 13480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/userId],methods=[PUT]}" onto public java.lang.Integer com.ane.controller.UserController.editUserByUserId(com.ane.domain.User)
+2017-10-20 10:41:55.621  INFO 13480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/create],methods=[POST]}" onto public java.lang.Integer com.ane.controller.UserController.createUser(java.lang.String,java.lang.String)
+2017-10-20 10:41:55.621  INFO 13480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/users],methods=[GET]}" onto public java.util.List<com.ane.domain.User> com.ane.controller.UserController.listUser(java.lang.Integer,java.lang.Integer,java.lang.String)
+2017-10-20 10:41:55.622  INFO 13480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/users/count],methods=[GET]}" onto public java.lang.Integer com.ane.controller.UserController.countListUser(java.lang.String)
+2017-10-20 10:41:55.622  INFO 13480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/login],methods=[GET]}" onto public java.lang.Integer com.ane.controller.UserController.loginUser(java.lang.String,java.lang.String)
+2017-10-20 10:41:55.622  INFO 13480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/account],methods=[GET]}" onto public com.ane.domain.User com.ane.controller.UserController.getUserByAccount(java.lang.String)
+2017-10-20 10:41:55.627  INFO 13480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-20 10:41:55.627  INFO 13480 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-20 10:41:55.687  INFO 13480 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-20 10:41:55.688  INFO 13480 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-20 10:41:55.775  INFO 13480 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-20 10:41:56.430  INFO 13480 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 10:41:56.435  INFO 13480 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 10:41:56.452  INFO 13480 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 10:41:56.453  INFO 13480 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 10:41:56.455  INFO 13480 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 10:41:56.458  INFO 13480 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2017-10-20 10:41:56.460  INFO 13480 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 10:41:56.464  INFO 13480 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2017-10-20 10:41:56.466  INFO 13480 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2017-10-20 10:41:56.467  INFO 13480 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 10:41:56.475  INFO 13480 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2017-10-20 10:41:56.476  INFO 13480 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 10:41:56.479  INFO 13480 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 10:41:56.483  INFO 13480 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2017-10-20 10:41:56.963  INFO 13480 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-10-20 10:41:56.976  INFO 13480 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2017-10-20 10:41:57.334  INFO 13480 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 1002 (http)
+2017-10-20 10:41:57.339  INFO 13480 --- [main] com.ane.Application                      : Started Application in 8.467 seconds (JVM running for 8.995)
+2017-10-20 10:43:05.215  INFO 13480 --- [http-nio-1002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-10-20 10:43:05.215  INFO 13480 --- [http-nio-1002-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-10-20 10:43:05.266  INFO 13480 --- [http-nio-1002-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 51 ms
+2017-10-20 12:23:08.182  INFO 13084 --- [main] com.ane.Application                      : Starting Application on DESKTOP-ERCUHFH with PID 13084 (F:\worspecke\ane_user\target\classes started by xiaojun in F:\worspecke\ane_user)
+2017-10-20 12:23:08.191  INFO 13084 --- [main] com.ane.Application                      : No active profile set, falling back to default profiles: default
+2017-10-20 12:23:08.280  INFO 13084 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@22bac7bc: startup date [Fri Oct 20 12:23:08 CST 2017]; root of context hierarchy
+2017-10-20 12:23:10.766  INFO 13084 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$329e1aad] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-10-20 12:23:11.873  INFO 13084 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 1002 (http)
+2017-10-20 12:23:11.905  INFO 13084 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-10-20 12:23:11.907  INFO 13084 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2017-10-20 12:23:12.340  INFO 13084 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-10-20 12:23:12.340  INFO 13084 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4066 ms
+2017-10-20 12:23:13.066  INFO 13084 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-10-20 12:23:13.074  INFO 13084 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2017-10-20 12:23:13.075  INFO 13084 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-10-20 12:23:13.079  INFO 13084 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-10-20 12:23:13.081  INFO 13084 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-10-20 12:23:13.081  INFO 13084 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-10-20 12:23:13.082  INFO 13084 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2017-10-20 12:23:13.082  INFO 13084 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2017-10-20 12:23:14.865  INFO 13084 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@22bac7bc: startup date [Fri Oct 20 12:23:08 CST 2017]; root of context hierarchy
+2017-10-20 12:23:14.984  INFO 13084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/permissions/pid],methods=[GET]}" onto public java.util.List<com.ane.domain.Permission> com.ane.controller.PermissionController.findPermissionsByPId(java.lang.Long)
+2017-10-20 12:23:14.986  INFO 13084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/permissions/user],methods=[GET]}" onto public java.util.List<com.ane.domain.Permission> com.ane.controller.PermissionController.findMyPerMissions(java.lang.String,java.lang.Long)
+2017-10-20 12:23:14.990  INFO 13084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles/count],methods=[GET]}" onto public java.lang.Integer com.ane.controller.RoleController.countRoles(java.lang.String)
+2017-10-20 12:23:14.990  INFO 13084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles],methods=[PUT]}" onto public java.lang.Integer com.ane.controller.RoleController.updateRole(com.ane.domain.Role)
+2017-10-20 12:23:14.991  INFO 13084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles/{id}],methods=[GET]}" onto public com.ane.domain.Role com.ane.controller.RoleController.getRoleById(java.lang.Long)
+2017-10-20 12:23:14.992  INFO 13084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles],methods=[POST]}" onto public java.lang.Long com.ane.controller.RoleController.saveRole(com.ane.domain.Role)
+2017-10-20 12:23:14.992  INFO 13084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles],methods=[GET]}" onto public java.util.List<com.ane.domain.Role> com.ane.controller.RoleController.findRoles(java.lang.String,java.lang.Integer,java.lang.Integer)
+2017-10-20 12:23:14.993  INFO 13084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles],methods=[PATCH]}" onto public java.lang.Integer com.ane.controller.RoleController.updateRoleSelected(com.ane.domain.Role)
+2017-10-20 12:23:14.995  INFO 13084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/rolePermissions],methods=[GET]}" onto public java.util.List<com.ane.domain.RolePermission> com.ane.controller.RolePermissionController.findRolePermissions(java.lang.Integer,java.lang.Long...)
+2017-10-20 12:23:14.996  INFO 13084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/rolePermissions],methods=[DELETE]}" onto public java.lang.Integer com.ane.controller.RolePermissionController.removeRolePermissionsByRefId(java.lang.Long[],java.lang.Integer,java.lang.Long)
+2017-10-20 12:23:14.996  INFO 13084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/rolePermissions/batch],methods=[POST]}" onto public java.lang.Integer com.ane.controller.RolePermissionController.saveRolePermissions(java.util.List<com.ane.domain.RolePermission>)
+2017-10-20 12:23:15.010  INFO 13084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/id],methods=[GET]}" onto public com.ane.domain.User com.ane.controller.UserController.getUserByUserId(java.lang.Long)
+2017-10-20 12:23:15.012  INFO 13084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/login],methods=[GET]}" onto public java.lang.Integer com.ane.controller.UserController.loginUser(java.lang.String,java.lang.String)
+2017-10-20 12:23:15.012  INFO 13084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/users/count],methods=[GET]}" onto public java.lang.Integer com.ane.controller.UserController.countListUser(java.lang.String)
+2017-10-20 12:23:15.012  INFO 13084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/userId],methods=[DELETE]}" onto public java.lang.Integer com.ane.controller.UserController.delUserByUserId(java.lang.Long)
+2017-10-20 12:23:15.012  INFO 13084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/userId],methods=[PUT]}" onto public java.lang.Integer com.ane.controller.UserController.editUserByUserId(com.ane.domain.User)
+2017-10-20 12:23:15.013  INFO 13084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/create],methods=[POST]}" onto public java.lang.Integer com.ane.controller.UserController.createUser(java.lang.String,java.lang.String)
+2017-10-20 12:23:15.013  INFO 13084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/account],methods=[GET]}" onto public com.ane.domain.User com.ane.controller.UserController.getUserByAccount(java.lang.String)
+2017-10-20 12:23:15.013  INFO 13084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/users],methods=[GET]}" onto public java.util.List<com.ane.domain.User> com.ane.controller.UserController.listUser(java.lang.Integer,java.lang.Integer,java.lang.String)
+2017-10-20 12:23:15.014  INFO 13084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/userRoles/roleId],methods=[GET]}" onto public java.util.List<com.ane.domain.UserRole> com.ane.controller.UserRoleController.findRoleUserByRoleId(java.lang.Long)
+2017-10-20 12:23:15.019  INFO 13084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-20 12:23:15.020  INFO 13084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-20 12:23:15.096  INFO 13084 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-20 12:23:15.096  INFO 13084 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-20 12:23:15.195  INFO 13084 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-20 12:23:15.893  INFO 13084 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 12:23:15.896  INFO 13084 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2017-10-20 12:23:15.897  INFO 13084 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 12:23:15.899  INFO 13084 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 12:23:15.901  INFO 13084 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2017-10-20 12:23:15.903  INFO 13084 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 12:23:15.909  INFO 13084 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2017-10-20 12:23:15.911  INFO 13084 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 12:23:15.913  INFO 13084 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 12:23:15.922  INFO 13084 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2017-10-20 12:23:15.923  INFO 13084 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 12:23:15.926  INFO 13084 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 12:23:15.930  INFO 13084 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2017-10-20 12:23:15.933  INFO 13084 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 12:23:16.519  INFO 13084 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-10-20 12:23:16.536  INFO 13084 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2017-10-20 12:23:16.960  INFO 13084 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 1002 (http)
+2017-10-20 12:23:16.971  INFO 13084 --- [main] com.ane.Application                      : Started Application in 9.467 seconds (JVM running for 10.012)
+2017-10-20 12:24:42.837  INFO 13084 --- [http-nio-1002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-10-20 12:24:42.838  INFO 13084 --- [http-nio-1002-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-10-20 12:24:42.916  INFO 13084 --- [http-nio-1002-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 78 ms
+2017-10-20 13:01:08.673  INFO 7188 --- [main] com.ane.Application                      : Starting Application on DESKTOP-ERCUHFH with PID 7188 (F:\worspecke\ane_user\target\classes started by xiaojun in F:\worspecke\ane_user)
+2017-10-20 13:01:08.680  INFO 7188 --- [main] com.ane.Application                      : No active profile set, falling back to default profiles: default
+2017-10-20 13:01:08.766  INFO 7188 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@63798ca7: startup date [Fri Oct 20 13:01:08 CST 2017]; root of context hierarchy
+2017-10-20 13:32:14.308  INFO 6440 --- [main] com.ane.Application                      : Starting Application on DESKTOP-ERCUHFH with PID 6440 (F:\worspecke\ane_user\target\classes started by xiaojun in F:\worspecke\ane_user)
+2017-10-20 13:32:14.315  INFO 6440 --- [main] com.ane.Application                      : No active profile set, falling back to default profiles: default
+2017-10-20 13:32:14.454  INFO 6440 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@63798ca7: startup date [Fri Oct 20 13:32:14 CST 2017]; root of context hierarchy
+2017-10-20 13:32:16.991  INFO 6440 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6325271] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-10-20 13:32:18.200  INFO 6440 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 1002 (http)
+2017-10-20 13:32:18.258  INFO 6440 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-10-20 13:32:18.262  INFO 6440 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2017-10-20 13:32:18.504  INFO 6440 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-10-20 13:32:18.505  INFO 6440 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4055 ms
+2017-10-20 13:32:19.232  INFO 6440 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-10-20 13:32:19.240  INFO 6440 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2017-10-20 13:32:19.241  INFO 6440 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-10-20 13:32:19.242  INFO 6440 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-10-20 13:32:19.244  INFO 6440 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-10-20 13:32:19.246  INFO 6440 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-10-20 13:32:19.246  INFO 6440 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2017-10-20 13:32:19.246  INFO 6440 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2017-10-20 13:32:21.214  INFO 6440 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@63798ca7: startup date [Fri Oct 20 13:32:14 CST 2017]; root of context hierarchy
+2017-10-20 13:32:21.375  INFO 6440 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/permissions/pid],methods=[GET]}" onto public java.util.List<com.ane.domain.Permission> com.ane.controller.PermissionController.findPermissionsByPId(java.lang.Long)
+2017-10-20 13:32:21.377  INFO 6440 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/permissions/user],methods=[GET]}" onto public java.util.List<com.ane.domain.Permission> com.ane.controller.PermissionController.findMyPerMissions(java.lang.String,java.lang.Long)
+2017-10-20 13:32:21.399  INFO 6440 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles],methods=[GET]}" onto public java.util.List<com.ane.domain.Role> com.ane.controller.RoleController.findRoles(java.lang.String,java.lang.Integer,java.lang.Integer)
+2017-10-20 13:32:21.399  INFO 6440 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles],methods=[POST]}" onto public java.lang.Long com.ane.controller.RoleController.saveRole(com.ane.domain.Role)
+2017-10-20 13:32:21.400  INFO 6440 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles/count],methods=[GET]}" onto public java.lang.Integer com.ane.controller.RoleController.countRoles(java.lang.String)
+2017-10-20 13:32:21.400  INFO 6440 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles/{id}],methods=[GET]}" onto public com.ane.domain.Role com.ane.controller.RoleController.getRoleById(java.lang.Long)
+2017-10-20 13:32:21.400  INFO 6440 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles],methods=[PUT]}" onto public java.lang.Integer com.ane.controller.RoleController.updateRole(com.ane.domain.Role)
+2017-10-20 13:32:21.400  INFO 6440 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles],methods=[PATCH]}" onto public java.lang.Integer com.ane.controller.RoleController.updateRoleSelected(com.ane.domain.Role)
+2017-10-20 13:32:21.404  INFO 6440 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/rolePermissions],methods=[GET]}" onto public java.util.List<com.ane.domain.RolePermission> com.ane.controller.RolePermissionController.findRolePermissions(java.lang.Integer,java.lang.Long...)
+2017-10-20 13:32:21.405  INFO 6440 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/rolePermissions],methods=[DELETE]}" onto public java.lang.Integer com.ane.controller.RolePermissionController.removeRolePermissionsByRefId(java.lang.Long[],java.lang.Integer,java.lang.Long)
+2017-10-20 13:32:21.406  INFO 6440 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/rolePermissions/batch],methods=[POST]}" onto public java.lang.Integer com.ane.controller.RolePermissionController.saveRolePermissions(java.util.List<com.ane.domain.RolePermission>)
+2017-10-20 13:32:21.416  INFO 6440 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/userId],methods=[DELETE]}" onto public java.lang.Integer com.ane.controller.UserController.delUserByUserId(java.lang.Long)
+2017-10-20 13:32:21.416  INFO 6440 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/userId],methods=[PUT]}" onto public java.lang.Integer com.ane.controller.UserController.editUserByUserId(com.ane.domain.User)
+2017-10-20 13:32:21.416  INFO 6440 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/account],methods=[GET]}" onto public com.ane.domain.User com.ane.controller.UserController.getUserByAccount(java.lang.String)
+2017-10-20 13:32:21.417  INFO 6440 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/create],methods=[POST]}" onto public java.lang.Integer com.ane.controller.UserController.createUser(java.lang.String,java.lang.String)
+2017-10-20 13:32:21.417  INFO 6440 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/login],methods=[GET]}" onto public java.lang.Integer com.ane.controller.UserController.loginUser(java.lang.String,java.lang.String)
+2017-10-20 13:32:21.418  INFO 6440 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/id],methods=[GET]}" onto public com.ane.domain.User com.ane.controller.UserController.getUserByUserId(java.lang.Long)
+2017-10-20 13:32:21.418  INFO 6440 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/users/count],methods=[GET]}" onto public java.lang.Integer com.ane.controller.UserController.countListUser(java.lang.String)
+2017-10-20 13:32:21.418  INFO 6440 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/users],methods=[GET]}" onto public java.util.List<com.ane.domain.User> com.ane.controller.UserController.listUser(java.lang.Integer,java.lang.Integer,java.lang.String)
+2017-10-20 13:32:21.420  INFO 6440 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/userRoles/batch],methods=[POST]}" onto public java.lang.Integer com.ane.controller.UserRoleController.saveUserRoles(java.util.List<com.ane.domain.UserRole>)
+2017-10-20 13:32:21.423  INFO 6440 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/userRoles/userId/roleId],methods=[GET]}" onto public java.util.List<com.ane.domain.UserRole> com.ane.controller.UserRoleController.findRolePermissionByUserId(java.lang.Long,java.lang.Long)
+2017-10-20 13:32:21.424  INFO 6440 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/userRoles/userId],methods=[PUT]}" onto public java.lang.Integer com.ane.controller.UserRoleController.delRoleUserByUserId(java.lang.Long[],java.lang.Long)
+2017-10-20 13:32:21.427  INFO 6440 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-20 13:32:21.428  INFO 6440 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-20 13:32:21.540  INFO 6440 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-20 13:32:21.541  INFO 6440 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-20 13:32:21.690  INFO 6440 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-20 13:32:22.590  INFO 6440 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 13:32:22.593  INFO 6440 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2017-10-20 13:32:22.593  INFO 6440 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 13:32:22.596  INFO 6440 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2017-10-20 13:32:22.607  INFO 6440 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 13:32:22.609  INFO 6440 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2017-10-20 13:32:22.612  INFO 6440 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2017-10-20 13:32:22.615  INFO 6440 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 13:32:22.617  INFO 6440 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 13:32:22.619  INFO 6440 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 13:32:22.624  INFO 6440 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 13:32:22.627  INFO 6440 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 13:32:22.629  INFO 6440 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2017-10-20 13:32:22.633  INFO 6440 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 13:32:23.311  INFO 6440 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-10-20 13:32:23.326  INFO 6440 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2017-10-20 13:32:23.847  INFO 6440 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 1002 (http)
+2017-10-20 13:32:23.855  INFO 6440 --- [main] com.ane.Application                      : Started Application in 10.299 seconds (JVM running for 10.987)
+2017-10-20 13:32:45.446  INFO 6440 --- [http-nio-1002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-10-20 13:32:45.447  INFO 6440 --- [http-nio-1002-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-10-20 13:32:45.478  INFO 6440 --- [http-nio-1002-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+2017-10-20 13:33:44.340 ERROR 6440 --- [http-nio-1002-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.binding.BindingException: Parameter 'userRoles' not found. Available parameters are [collection, list]] with root cause
+
+org.apache.ibatis.binding.BindingException: Parameter 'userRoles' not found. Available parameters are [collection, list]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession$StrictMap.get(DefaultSqlSession.java:343) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextAccessor.getProperty(DynamicContext.java:115) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.ognl.OgnlRuntime.getProperty(OgnlRuntime.java:2420) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.ognl.ASTProperty.getValueBody(ASTProperty.java:114) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:212) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:258) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:494) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:458) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.scripting.xmltags.OgnlCache.getValue(OgnlCache.java:44) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.scripting.xmltags.ExpressionEvaluator.evaluateIterable(ExpressionEvaluator.java:43) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.scripting.xmltags.ForEachSqlNode.apply(ForEachSqlNode.java:55) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:33) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.scripting.xmltags.DynamicSqlSource.getBoundSql(DynamicSqlSource.java:41) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.mapping.MappedStatement.getBoundSql(MappedStatement.java:292) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.<init>(BaseStatementHandler.java:64) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.<init>(PreparedStatementHandler.java:40) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.<init>(RoutingStatementHandler.java:46) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.session.Configuration.newStatementHandler(Configuration.java:523) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:48) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185) ~[mybatis-3.4.0.jar:3.4.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_144]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434) ~[mybatis-spring-1.3.0.jar:1.3.0]
+	at com.sun.proxy.$Proxy63.insert(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:279) ~[mybatis-spring-1.3.0.jar:1.3.0]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:56) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53) ~[mybatis-3.4.0.jar:3.4.0]
+	at com.sun.proxy.$Proxy67.saveUserRoles(Unknown Source) ~[na:na]
+	at com.ane.controller.UserRoleController.saveUserRoles(UserRoleController.java:32) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_144]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:220) ~[spring-web-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134) ~[spring-web-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116) ~[spring-webmvc-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) ~[spring-webmvc-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897) ~[spring-webmvc-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872) ~[spring-webmvc-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:105) ~[spring-boot-actuator-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89) ~[spring-web-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77) ~[spring-web-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:107) ~[spring-boot-actuator-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108) [tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472) [tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349) [tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784) [tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802) [tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410) [tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.6.jar:8.5.6]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_144]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_144]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.6.jar:8.5.6]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_144]
+
+2017-10-20 13:34:48.731 ERROR 6440 --- [http-nio-1002-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.binding.BindingException: Parameter 'userRoles' not found. Available parameters are [collection, list]] with root cause
+
+org.apache.ibatis.binding.BindingException: Parameter 'userRoles' not found. Available parameters are [collection, list]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession$StrictMap.get(DefaultSqlSession.java:343) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextAccessor.getProperty(DynamicContext.java:115) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.ognl.OgnlRuntime.getProperty(OgnlRuntime.java:2420) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.ognl.ASTProperty.getValueBody(ASTProperty.java:114) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:212) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:258) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:494) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:458) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.scripting.xmltags.OgnlCache.getValue(OgnlCache.java:44) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.scripting.xmltags.ExpressionEvaluator.evaluateIterable(ExpressionEvaluator.java:43) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.scripting.xmltags.ForEachSqlNode.apply(ForEachSqlNode.java:55) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:33) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.scripting.xmltags.DynamicSqlSource.getBoundSql(DynamicSqlSource.java:41) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.mapping.MappedStatement.getBoundSql(MappedStatement.java:292) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.<init>(BaseStatementHandler.java:64) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.<init>(PreparedStatementHandler.java:40) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.<init>(RoutingStatementHandler.java:46) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.session.Configuration.newStatementHandler(Configuration.java:523) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:48) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185) ~[mybatis-3.4.0.jar:3.4.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_144]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434) ~[mybatis-spring-1.3.0.jar:1.3.0]
+	at com.sun.proxy.$Proxy63.insert(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:279) ~[mybatis-spring-1.3.0.jar:1.3.0]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:56) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53) ~[mybatis-3.4.0.jar:3.4.0]
+	at com.sun.proxy.$Proxy67.saveUserRoles(Unknown Source) ~[na:na]
+	at com.ane.controller.UserRoleController.saveUserRoles(UserRoleController.java:32) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_144]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:220) ~[spring-web-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134) ~[spring-web-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116) ~[spring-webmvc-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) ~[spring-webmvc-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897) ~[spring-webmvc-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872) ~[spring-webmvc-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:105) ~[spring-boot-actuator-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89) ~[spring-web-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77) ~[spring-web-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:107) ~[spring-boot-actuator-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108) [tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472) [tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349) [tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784) [tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802) [tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410) [tomcat-embed-core-8.5.6.jar:8.5.6]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.6.jar:8.5.6]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_144]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_144]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.6.jar:8.5.6]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_144]
+
+2017-10-20 13:35:55.503  INFO 13872 --- [main] com.ane.Application                      : Starting Application on DESKTOP-ERCUHFH with PID 13872 (F:\worspecke\ane_user\target\classes started by xiaojun in F:\worspecke\ane_user)
+2017-10-20 13:35:55.512  INFO 13872 --- [main] com.ane.Application                      : No active profile set, falling back to default profiles: default
+2017-10-20 13:35:55.676  INFO 13872 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@22bac7bc: startup date [Fri Oct 20 13:35:55 CST 2017]; root of context hierarchy
+2017-10-20 13:35:58.250  INFO 13872 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6325271] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-10-20 13:35:59.096  INFO 13872 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 1002 (http)
+2017-10-20 13:35:59.115  INFO 13872 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-10-20 13:35:59.119  INFO 13872 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2017-10-20 13:35:59.284  INFO 13872 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-10-20 13:35:59.285  INFO 13872 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3615 ms
+2017-10-20 13:35:59.744  INFO 13872 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-10-20 13:35:59.750  INFO 13872 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2017-10-20 13:35:59.751  INFO 13872 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-10-20 13:35:59.751  INFO 13872 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-10-20 13:35:59.751  INFO 13872 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-10-20 13:35:59.751  INFO 13872 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-10-20 13:35:59.751  INFO 13872 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2017-10-20 13:35:59.752  INFO 13872 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2017-10-20 13:36:00.999  INFO 13872 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@22bac7bc: startup date [Fri Oct 20 13:35:55 CST 2017]; root of context hierarchy
+2017-10-20 13:36:01.106  INFO 13872 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/permissions/pid],methods=[GET]}" onto public java.util.List<com.ane.domain.Permission> com.ane.controller.PermissionController.findPermissionsByPId(java.lang.Long)
+2017-10-20 13:36:01.109  INFO 13872 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/permissions/user],methods=[GET]}" onto public java.util.List<com.ane.domain.Permission> com.ane.controller.PermissionController.findMyPerMissions(java.lang.String,java.lang.Long)
+2017-10-20 13:36:01.129  INFO 13872 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles],methods=[PATCH]}" onto public java.lang.Integer com.ane.controller.RoleController.updateRoleSelected(com.ane.domain.Role)
+2017-10-20 13:36:01.130  INFO 13872 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles/count],methods=[GET]}" onto public java.lang.Integer com.ane.controller.RoleController.countRoles(java.lang.String)
+2017-10-20 13:36:01.130  INFO 13872 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles],methods=[POST]}" onto public java.lang.Long com.ane.controller.RoleController.saveRole(com.ane.domain.Role)
+2017-10-20 13:36:01.131  INFO 13872 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles],methods=[PUT]}" onto public java.lang.Integer com.ane.controller.RoleController.updateRole(com.ane.domain.Role)
+2017-10-20 13:36:01.131  INFO 13872 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles/{id}],methods=[GET]}" onto public com.ane.domain.Role com.ane.controller.RoleController.getRoleById(java.lang.Long)
+2017-10-20 13:36:01.132  INFO 13872 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles],methods=[GET]}" onto public java.util.List<com.ane.domain.Role> com.ane.controller.RoleController.findRoles(java.lang.String,java.lang.Integer,java.lang.Integer)
+2017-10-20 13:36:01.133  INFO 13872 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/rolePermissions],methods=[GET]}" onto public java.util.List<com.ane.domain.RolePermission> com.ane.controller.RolePermissionController.findRolePermissions(java.lang.Integer,java.lang.Long...)
+2017-10-20 13:36:01.134  INFO 13872 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/rolePermissions/batch],methods=[POST]}" onto public java.lang.Integer com.ane.controller.RolePermissionController.saveRolePermissions(java.util.List<com.ane.domain.RolePermission>)
+2017-10-20 13:36:01.134  INFO 13872 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/rolePermissions],methods=[DELETE]}" onto public java.lang.Integer com.ane.controller.RolePermissionController.removeRolePermissionsByRefId(java.lang.Long[],java.lang.Integer,java.lang.Long)
+2017-10-20 13:36:01.148  INFO 13872 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/id],methods=[GET]}" onto public com.ane.domain.User com.ane.controller.UserController.getUserByUserId(java.lang.Long)
+2017-10-20 13:36:01.149  INFO 13872 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/account],methods=[GET]}" onto public com.ane.domain.User com.ane.controller.UserController.getUserByAccount(java.lang.String)
+2017-10-20 13:36:01.150  INFO 13872 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/users],methods=[GET]}" onto public java.util.List<com.ane.domain.User> com.ane.controller.UserController.listUser(java.lang.Integer,java.lang.Integer,java.lang.String)
+2017-10-20 13:36:01.150  INFO 13872 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/users/count],methods=[GET]}" onto public java.lang.Integer com.ane.controller.UserController.countListUser(java.lang.String)
+2017-10-20 13:36:01.151  INFO 13872 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/userId],methods=[DELETE]}" onto public java.lang.Integer com.ane.controller.UserController.delUserByUserId(java.lang.Long)
+2017-10-20 13:36:01.151  INFO 13872 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/userId],methods=[PUT]}" onto public java.lang.Integer com.ane.controller.UserController.editUserByUserId(com.ane.domain.User)
+2017-10-20 13:36:01.153  INFO 13872 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/login],methods=[GET]}" onto public java.lang.Integer com.ane.controller.UserController.loginUser(java.lang.String,java.lang.String)
+2017-10-20 13:36:01.154  INFO 13872 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/create],methods=[POST]}" onto public java.lang.Integer com.ane.controller.UserController.createUser(java.lang.String,java.lang.String)
+2017-10-20 13:36:01.163  INFO 13872 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/userRoles/userId/roleId],methods=[GET]}" onto public java.util.List<com.ane.domain.UserRole> com.ane.controller.UserRoleController.findRolePermissionByUserId(java.lang.Long,java.lang.Long)
+2017-10-20 13:36:01.163  INFO 13872 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/userRoles/userId],methods=[PUT]}" onto public java.lang.Integer com.ane.controller.UserRoleController.delRoleUserByUserId(java.lang.Long[],java.lang.Long)
+2017-10-20 13:36:01.164  INFO 13872 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/userRoles/batch],methods=[POST]}" onto public java.lang.Integer com.ane.controller.UserRoleController.saveUserRoles(java.util.List<com.ane.domain.UserRole>)
+2017-10-20 13:36:01.167  INFO 13872 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-20 13:36:01.168  INFO 13872 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-20 13:36:01.243  INFO 13872 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-20 13:36:01.243  INFO 13872 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-20 13:36:01.332  INFO 13872 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-20 13:36:01.942  INFO 13872 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2017-10-20 13:36:01.945  INFO 13872 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 13:36:01.947  INFO 13872 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2017-10-20 13:36:01.948  INFO 13872 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 13:36:01.949  INFO 13872 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 13:36:01.950  INFO 13872 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 13:36:01.951  INFO 13872 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 13:36:01.953  INFO 13872 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 13:36:01.955  INFO 13872 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2017-10-20 13:36:01.956  INFO 13872 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 13:36:01.960  INFO 13872 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2017-10-20 13:36:01.961  INFO 13872 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 13:36:01.963  INFO 13872 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2017-10-20 13:36:01.964  INFO 13872 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 13:36:02.470  INFO 13872 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-10-20 13:36:02.485  INFO 13872 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2017-10-20 13:36:02.946  INFO 13872 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 1002 (http)
+2017-10-20 13:36:02.954  INFO 13872 --- [main] com.ane.Application                      : Started Application in 8.721 seconds (JVM running for 9.383)
+2017-10-20 13:36:07.762  INFO 13872 --- [http-nio-1002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-10-20 13:36:07.763  INFO 13872 --- [http-nio-1002-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-10-20 13:36:07.813  INFO 13872 --- [http-nio-1002-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 50 ms
+2017-10-20 13:49:46.428  INFO 15788 --- [main] com.ane.Application                      : Starting Application on DESKTOP-ERCUHFH with PID 15788 (F:\worspecke\ane_user\target\classes started by xiaojun in F:\worspecke\ane_user)
+2017-10-20 13:49:46.436  INFO 15788 --- [main] com.ane.Application                      : No active profile set, falling back to default profiles: default
+2017-10-20 13:49:46.620  INFO 15788 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@22bac7bc: startup date [Fri Oct 20 13:49:46 CST 2017]; root of context hierarchy
+2017-10-20 13:49:49.482  INFO 15788 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7a871cbb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-10-20 13:49:50.756  INFO 15788 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 1002 (http)
+2017-10-20 13:49:50.784  INFO 15788 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-10-20 13:49:50.786  INFO 15788 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2017-10-20 13:49:51.000  INFO 15788 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-10-20 13:49:51.001  INFO 15788 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4385 ms
+2017-10-20 13:49:51.596  INFO 15788 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-10-20 13:49:51.603  INFO 15788 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2017-10-20 13:49:51.604  INFO 15788 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-10-20 13:49:51.604  INFO 15788 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-10-20 13:49:51.605  INFO 15788 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-10-20 13:49:51.605  INFO 15788 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-10-20 13:49:51.605  INFO 15788 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2017-10-20 13:49:51.605  INFO 15788 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2017-10-20 13:49:53.402  INFO 15788 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@22bac7bc: startup date [Fri Oct 20 13:49:46 CST 2017]; root of context hierarchy
+2017-10-20 13:49:53.510  INFO 15788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/permissions/pid],methods=[GET]}" onto public java.util.List<com.ane.domain.Permission> com.ane.controller.PermissionController.findPermissionsByPId(java.lang.Long)
+2017-10-20 13:49:53.515  INFO 15788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/permissions/user],methods=[GET]}" onto public java.util.List<com.ane.domain.Permission> com.ane.controller.PermissionController.findMyPerMissions(java.lang.String,java.lang.Long)
+2017-10-20 13:49:53.518  INFO 15788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles],methods=[PATCH]}" onto public java.lang.Integer com.ane.controller.RoleController.updateRoleSelected(com.ane.domain.Role)
+2017-10-20 13:49:53.518  INFO 15788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles/count],methods=[GET]}" onto public java.lang.Integer com.ane.controller.RoleController.countRoles(java.lang.String)
+2017-10-20 13:49:53.518  INFO 15788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles/{id}],methods=[GET]}" onto public com.ane.domain.Role com.ane.controller.RoleController.getRoleById(java.lang.Long)
+2017-10-20 13:49:53.519  INFO 15788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles],methods=[GET]}" onto public java.util.List<com.ane.domain.Role> com.ane.controller.RoleController.findRoles(java.lang.String,java.lang.Integer,java.lang.Integer)
+2017-10-20 13:49:53.519  INFO 15788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles],methods=[POST]}" onto public java.lang.Long com.ane.controller.RoleController.saveRole(com.ane.domain.Role)
+2017-10-20 13:49:53.519  INFO 15788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles],methods=[PUT]}" onto public java.lang.Integer com.ane.controller.RoleController.updateRole(com.ane.domain.Role)
+2017-10-20 13:49:53.521  INFO 15788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/rolePermissions],methods=[DELETE]}" onto public java.lang.Integer com.ane.controller.RolePermissionController.removeRolePermissionsByRefId(java.lang.Long[],java.lang.Integer,java.lang.Long)
+2017-10-20 13:49:53.522  INFO 15788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/rolePermissions],methods=[GET]}" onto public java.util.List<com.ane.domain.RolePermission> com.ane.controller.RolePermissionController.findRolePermissions(java.lang.Integer,java.lang.Long...)
+2017-10-20 13:49:53.523  INFO 15788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/rolePermissions/batch],methods=[POST]}" onto public java.lang.Integer com.ane.controller.RolePermissionController.saveRolePermissions(java.util.List<com.ane.domain.RolePermission>)
+2017-10-20 13:49:53.532  INFO 15788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/id],methods=[GET]}" onto public com.ane.domain.User com.ane.controller.UserController.getUserByUserId(java.lang.Long)
+2017-10-20 13:49:53.533  INFO 15788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/users/count],methods=[GET]}" onto public java.lang.Integer com.ane.controller.UserController.countListUser(java.lang.String)
+2017-10-20 13:49:53.534  INFO 15788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/userId],methods=[PUT]}" onto public java.lang.Integer com.ane.controller.UserController.editUserByUserId(com.ane.domain.User)
+2017-10-20 13:49:53.534  INFO 15788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/userId],methods=[DELETE]}" onto public java.lang.Integer com.ane.controller.UserController.delUserByUserId(java.lang.Long)
+2017-10-20 13:49:53.535  INFO 15788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/users],methods=[GET]}" onto public java.util.List<com.ane.domain.User> com.ane.controller.UserController.listUser(java.lang.Integer,java.lang.Integer,java.lang.String)
+2017-10-20 13:49:53.536  INFO 15788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/account],methods=[GET]}" onto public com.ane.domain.User com.ane.controller.UserController.getUserByAccount(java.lang.String)
+2017-10-20 13:49:53.538  INFO 15788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/userRoles/userId/roleId],methods=[GET]}" onto public java.util.List<com.ane.domain.UserRole> com.ane.controller.UserRoleController.findRolePermissionByUserId(java.lang.Long,java.lang.Long)
+2017-10-20 13:49:53.538  INFO 15788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/userRoles/userId],methods=[PUT]}" onto public java.lang.Integer com.ane.controller.UserRoleController.delRoleUserByUserId(java.lang.Long[],java.lang.Long)
+2017-10-20 13:49:53.539  INFO 15788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/userRoles/batch],methods=[POST]}" onto public java.lang.Integer com.ane.controller.UserRoleController.saveUserRoles(java.util.List<com.ane.domain.UserRole>)
+2017-10-20 13:49:53.557  INFO 15788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-20 13:49:53.559  INFO 15788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-20 13:49:53.672  INFO 15788 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-20 13:49:53.673  INFO 15788 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-20 13:49:53.780  INFO 15788 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-20 13:49:54.380  INFO 15788 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 13:49:54.382  INFO 15788 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2017-10-20 13:49:54.382  INFO 15788 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 13:49:54.383  INFO 15788 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 13:49:54.385  INFO 15788 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2017-10-20 13:49:54.387  INFO 15788 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 13:49:54.388  INFO 15788 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 13:49:54.391  INFO 15788 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2017-10-20 13:49:54.393  INFO 15788 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 13:49:54.395  INFO 15788 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2017-10-20 13:49:54.396  INFO 15788 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 13:49:54.401  INFO 15788 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2017-10-20 13:49:54.401  INFO 15788 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 13:49:54.403  INFO 15788 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 13:49:54.962  INFO 15788 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-10-20 13:49:54.980  INFO 15788 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2017-10-20 13:49:55.421  INFO 15788 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 1002 (http)
+2017-10-20 13:49:55.432  INFO 15788 --- [main] com.ane.Application                      : Started Application in 9.908 seconds (JVM running for 10.553)
+2017-10-20 13:50:21.484  INFO 15788 --- [http-nio-1002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-10-20 13:50:21.485  INFO 15788 --- [http-nio-1002-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-10-20 13:50:21.568  INFO 15788 --- [http-nio-1002-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 83 ms
+2017-10-20 14:03:32.532  INFO 12192 --- [main] com.ane.Application                      : Starting Application on DESKTOP-ERCUHFH with PID 12192 (F:\worspecke\ane_user\target\classes started by xiaojun in F:\worspecke\ane_user)
+2017-10-20 14:03:32.540  INFO 12192 --- [main] com.ane.Application                      : No active profile set, falling back to default profiles: default
+2017-10-20 14:03:32.652  INFO 12192 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@63798ca7: startup date [Fri Oct 20 14:03:32 CST 2017]; root of context hierarchy
+2017-10-20 14:03:35.136  INFO 12192 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d2d99a1f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-10-20 14:03:36.111  INFO 12192 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 1002 (http)
+2017-10-20 14:03:36.140  INFO 12192 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-10-20 14:03:36.142  INFO 12192 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2017-10-20 14:03:36.302  INFO 12192 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-10-20 14:03:36.303  INFO 12192 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3655 ms
+2017-10-20 14:03:36.809  INFO 12192 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-10-20 14:03:36.816  INFO 12192 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2017-10-20 14:03:36.817  INFO 12192 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-10-20 14:03:36.817  INFO 12192 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-10-20 14:03:36.817  INFO 12192 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-10-20 14:03:36.818  INFO 12192 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-10-20 14:03:36.818  INFO 12192 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2017-10-20 14:03:36.818  INFO 12192 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2017-10-20 14:03:38.341  INFO 12192 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@63798ca7: startup date [Fri Oct 20 14:03:32 CST 2017]; root of context hierarchy
+2017-10-20 14:03:38.460  INFO 12192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/permissions/user],methods=[GET]}" onto public java.util.List<com.ane.domain.Permission> com.ane.controller.PermissionController.findMyPerMissions(java.lang.String,java.lang.Long)
+2017-10-20 14:03:38.464  INFO 12192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/permissions/pid],methods=[GET]}" onto public java.util.List<com.ane.domain.Permission> com.ane.controller.PermissionController.findPermissionsByPId(java.lang.Long)
+2017-10-20 14:03:38.470  INFO 12192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles],methods=[PATCH]}" onto public java.lang.Integer com.ane.controller.RoleController.updateRoleSelected(com.ane.domain.Role)
+2017-10-20 14:03:38.471  INFO 12192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles],methods=[PUT]}" onto public java.lang.Integer com.ane.controller.RoleController.updateRole(com.ane.domain.Role)
+2017-10-20 14:03:38.472  INFO 12192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles/{id}],methods=[GET]}" onto public com.ane.domain.Role com.ane.controller.RoleController.getRoleById(java.lang.Long)
+2017-10-20 14:03:38.472  INFO 12192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles/count],methods=[GET]}" onto public java.lang.Integer com.ane.controller.RoleController.countRoles(java.lang.String)
+2017-10-20 14:03:38.473  INFO 12192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles],methods=[GET]}" onto public java.util.List<com.ane.domain.Role> com.ane.controller.RoleController.findRoles(java.lang.String,java.lang.Integer,java.lang.Integer)
+2017-10-20 14:03:38.473  INFO 12192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/roles],methods=[POST]}" onto public java.lang.Long com.ane.controller.RoleController.saveRole(com.ane.domain.Role)
+2017-10-20 14:03:38.478  INFO 12192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/rolePermissions],methods=[DELETE]}" onto public java.lang.Integer com.ane.controller.RolePermissionController.removeRolePermissionsByRefId(java.lang.Long[],java.lang.Integer,java.lang.Long)
+2017-10-20 14:03:38.479  INFO 12192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/rolePermissions],methods=[GET]}" onto public java.util.List<com.ane.domain.RolePermission> com.ane.controller.RolePermissionController.findRolePermissions(java.lang.Integer,java.lang.Long...)
+2017-10-20 14:03:38.480  INFO 12192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/rolePermissions/batch],methods=[POST]}" onto public java.lang.Integer com.ane.controller.RolePermissionController.saveRolePermissions(java.util.List<com.ane.domain.RolePermission>)
+2017-10-20 14:03:38.489  INFO 12192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/userId],methods=[PUT]}" onto public java.lang.Integer com.ane.controller.UserController.editUserByUserId(com.ane.domain.User)
+2017-10-20 14:03:38.490  INFO 12192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/users],methods=[GET]}" onto public java.util.List<com.ane.domain.User> com.ane.controller.UserController.listUser(java.lang.Integer,java.lang.Integer,java.lang.String)
+2017-10-20 14:03:38.491  INFO 12192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/account],methods=[GET]}" onto public com.ane.domain.User com.ane.controller.UserController.getUserByAccount(java.lang.String)
+2017-10-20 14:03:38.492  INFO 12192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/users/count],methods=[GET]}" onto public java.lang.Integer com.ane.controller.UserController.countListUser(java.lang.String)
+2017-10-20 14:03:38.492  INFO 12192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/userId],methods=[DELETE]}" onto public java.lang.Integer com.ane.controller.UserController.delUserByUserId(java.lang.Long)
+2017-10-20 14:03:38.493  INFO 12192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/user/id],methods=[GET]}" onto public com.ane.domain.User com.ane.controller.UserController.getUserByUserId(java.lang.Long)
+2017-10-20 14:03:38.494  INFO 12192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/userRoles/userId/roleId],methods=[GET]}" onto public java.util.List<com.ane.domain.UserRole> com.ane.controller.UserRoleController.findRolePermissionByUserId(java.lang.Long,java.lang.Long)
+2017-10-20 14:03:38.495  INFO 12192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/userRoles/userId],methods=[PUT]}" onto public java.lang.Integer com.ane.controller.UserRoleController.delRoleUserByUserId(java.lang.Long[],java.lang.Long)
+2017-10-20 14:03:38.496  INFO 12192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/userRoles/batch],methods=[POST]}" onto public java.lang.Integer com.ane.controller.UserRoleController.saveUserRoles(java.util.List<com.ane.domain.UserRole>)
+2017-10-20 14:03:38.500  INFO 12192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-20 14:03:38.501  INFO 12192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-20 14:03:38.765  INFO 12192 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-20 14:03:38.767  INFO 12192 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-20 14:03:38.928  INFO 12192 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-20 14:03:39.801  INFO 12192 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2017-10-20 14:03:39.802  INFO 12192 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2017-10-20 14:03:39.805  INFO 12192 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 14:03:39.806  INFO 12192 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2017-10-20 14:03:39.807  INFO 12192 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 14:03:39.809  INFO 12192 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 14:03:39.810  INFO 12192 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 14:03:39.812  INFO 12192 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2017-10-20 14:03:39.813  INFO 12192 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 14:03:39.814  INFO 12192 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 14:03:39.815  INFO 12192 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2017-10-20 14:03:39.819  INFO 12192 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 14:03:39.821  INFO 12192 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 14:03:39.822  INFO 12192 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-20 14:03:40.496  INFO 12192 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-10-20 14:03:40.515  INFO 12192 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2017-10-20 14:03:41.021  INFO 12192 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 1002 (http)
+2017-10-20 14:03:41.032  INFO 12192 --- [main] com.ane.Application                      : Started Application in 9.182 seconds (JVM running for 9.81)
+2017-10-20 14:03:51.037  INFO 12192 --- [http-nio-1002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-10-20 14:03:51.037  INFO 12192 --- [http-nio-1002-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-10-20 14:03:51.083  INFO 12192 --- [http-nio-1002-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 45 ms

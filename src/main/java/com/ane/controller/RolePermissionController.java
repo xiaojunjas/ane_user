@@ -19,10 +19,10 @@ public class RolePermissionController {
 	@Autowired
 	public RolePermissionDao rolePermissionDao;
 	
-	@RequestMapping(value="/rolePermissions", method=RequestMethod.POST)
+	/*@RequestMapping(value="/rolePermissions", method=RequestMethod.POST)
 	public Long saveRolePermissions(@RequestBody RolePermission rolePermission){
 		return rolePermissionDao.saveRolePermission(rolePermission);
-	}
+	}*/
 	
 	@RequestMapping(value="/rolePermissions/batch", method=RequestMethod.POST)
 	public Integer saveRolePermissions(@RequestBody List<RolePermission> list){
@@ -38,8 +38,5 @@ public class RolePermissionController {
 	public Integer removeRolePermissionsByRefId(Long[] permIds,Integer type,Long refId){
 		return rolePermissionDao.removeRolePermissionsByRefId(permIds, type, refId);
 	}
-	
-	
-	
 
 }

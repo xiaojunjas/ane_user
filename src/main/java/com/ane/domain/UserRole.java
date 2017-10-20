@@ -9,7 +9,6 @@ public class UserRole {
 	private Long userId;
 	private Integer type; //0用户角色  1组织角色
 	private Long refId;
-	private Long schoolId;
 	private Integer isDeleted;
 	public Long getId() {
 		return id;
@@ -35,23 +34,10 @@ public class UserRole {
 	public void setRefId(Long refId) {
 		this.refId = refId;
 	}
-	public Long getSchoolId() {
-		return schoolId;
-	}
-	public void setSchoolId(Long schoolId) {
-		this.schoolId = schoolId;
-	}
 	public Integer getIsDeleted() {
 		return isDeleted;
 	}
 	public void setIsDeleted(Integer isDeleted) {
 		this.isDeleted = isDeleted;
 	}
-	@Override
-	public String toString() {
-		return "UserRole [id=" + id + ", userId=" + userId + ", type=" + type + ", refId=" + refId + ", schoolId="
-				+ schoolId + ", isDeleted=" + isDeleted + "]";
-	}
-	
-	
 }

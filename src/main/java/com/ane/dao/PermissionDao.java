@@ -9,7 +9,7 @@ import com.ane.domain.Permission;
 @Mapper
 public interface PermissionDao {
 
-	Permission getPermissionById(@Param("id") Long id);
+//	Permission getPermissionById(@Param("id") Long id);
 
 	List<Permission> findPermissionsByPId(@Param("pid") Long pid);
 

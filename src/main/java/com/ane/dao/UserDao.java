@@ -21,9 +21,5 @@ public interface UserDao {
 	public User getUserByUserId(@Param("userId")Long userId);
 	
 	public Integer editUserByUserId(User user);
-	
-	public Integer loginUser(@Param("name")String name,@Param("password")String password);
-	
-	public Integer createUser(@Param("name")String name,@Param("password")String password);
 
 }

@@ -26,12 +26,4 @@ public interface RoleDao {
 	
 	public Integer updateRoleSelected(Role role);
 
-	/*public void updateListUserRoleIsDeleted(@Param("refId")Long refId);
-
-	public void updateListRolePermissionIsDeleted(@Param("refId")Long refId);
-
-	public void updateListUserRoleRefId(@Param("oldRefId")Long oldRefId,@Param("newRefId") Long newRefId);
-
-	public void updateListRolePermissionRefId(@Param("oldRefId")Long oldRefId,@Param("newRefId")Long newRefId);*/
-	
 }

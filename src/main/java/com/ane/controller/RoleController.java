@@ -50,29 +50,5 @@ public class RoleController {
 		return roleDao.updateRoleSelected(role);
 	}
 	
-	/*@RequestMapping(value="/roles", method=RequestMethod.DELETE)
-	public Integer deleteRole(@RequestParam("id") Long id){
-		Role role = new Role();
-		role.setId(id);
-		role.setIsDeleted(1);
-		return roleDao.updateRoleSelected(role);
-	}
 	
-	@RequestMapping(value="/organizations/newOrgs", method=RequestMethod.POST)
-	public int editOldOrganization(@RequestBody Map<Long, Long> map){
-		for (Map.Entry<Long, Long> entry : map.entrySet()) { 
-			Long oldOrgId = entry.getKey();
-			Long newOrgId = entry.getKey();
-			if(newOrgId == 0L){
-				roleDao.updateListUserRoleIsDeleted(oldOrgId);
-				roleDao.updateListRolePermissionIsDeleted(oldOrgId);
-			}else{
-				roleDao.updateListUserRoleRefId(oldOrgId,newOrgId);
-				roleDao.updateListRolePermissionRefId(oldOrgId,newOrgId);
-			}
-			
-		}
-		return HttpStatus.OK.value();
-	}*/
-
 }

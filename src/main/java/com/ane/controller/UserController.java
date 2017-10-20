@@ -48,13 +48,4 @@ public class UserController {
 		return userDao.editUserByUserId(user);
 	}
 	
-	@RequestMapping(value="/user/login", method=RequestMethod.GET)
-	public Integer loginUser(String name,String password){
-		return userDao.loginUser(name,password);
-	}
-	
-	@RequestMapping(value="/user/create", method=RequestMethod.POST)
-	public Integer createUser(String name,String password){
-		return userDao.createUser(name,password);
-	}
 }

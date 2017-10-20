@@ -5,7 +5,6 @@
 	<sql id="userSql">
 		u.id,
 		u.login_name as account,
-		<!-- password, -->
 		u.avatar,
 		u.type,
 		u.name,
@@ -23,157 +22,31 @@
 		ur.ref_id as refId,
 		ur.is_deleted as isDeleted
 	</sql>
-	
-	<insert id="saveUserRole" useGeneratedKeys="true" keyProperty="id">  
-		insert into user_role_t(user_id, type, ref_id, school_t, is_deleted)
-		values(#{userId}, #{type}, #{refId}, #{schoolId},0)
-	</insert>
-	
+
 	<insert id="saveUserRoles" >  
-		insert into user_role_t(user_id, type, ref_id, school_t, is_deleted)
+		insert into user_role_t(user_id, type, ref_id, is_deleted)
 			values
 			<foreach collection="userRoles" item="etp" index="index" separator=",">
-				(#{etp.userId}, #{etp.type}, #{etp.refId}, #{etp.schoolId},0)
+				(#{etp.userId}, #{etp.type}, #{etp.refId},0)
 			</foreach>
 	</insert>
 	
-	<update id="updateUserRoleByUserId">
-		update user_role_t set ref_id = #{organizationId} where user_id = #{userId} and type = #{type} and ref_id = #{orgStarId}
+	<update id="delRoleUserByUserId">
+		update user_role_t set is_deleted = 1 where ref_id = #{roleId} and user_id in
+		<foreach collection="delteaIds" item="userId" open="(" separator="," close=")">
+			#{userId}
+		</foreach>
 	</update>
-
-	<update id="updateUserRoleById">
-		update user_role_t set ref_id = #{organizationId},user_id=#{userId} where id=${id}
-	</update>
-	
-	<select id="countUnRoleUsers" resultType="Integer">
-		SELECT COUNT(1)
-		FROM user_t u
-		LEFT JOIN user_role_t ur ON u.id = ur.user_id AND ur.`type` = 0 AND ur.is_deleted = 0 AND ur.ref_id = #{roleId}
-		WHERE 
-			ur.id IS NULL 
-			AND u.is_deleted = 0 
-			AND u.`status` = 0 
-			AND u.school_id = #{schoolId}
-			<if test="query!=null">
-				and(
-					u.name like concat("%", #{query}, "%")
-					or u.login_name like concat("%", #{query}, "%")
-				)
-			</if>
-			<if test="userType!=null">
-				AND u.type = #{userType}
-			</if>
-			
-	</select>
-	
-	<select id="findUnRoleUsers" resultType="User">
-		SELECT <include refid="userSql"/><!-- ,our.ref_id orgId -->
-		FROM user_t u
-		LEFT JOIN user_role_t ur ON u.id = ur.user_id AND ur.`type` = 0 AND ur.is_deleted = 0 AND ur.ref_id = #{roleId}
-		WHERE 
-			ur.id IS NULL 
-			AND u.is_deleted = 0 
-			AND u.`status` = 0 
-			AND u.school_id = #{schoolId}
-			<if test="query!=null">
-				and(
-					u.name like concat("%", #{query}, "%")
-					or u.login_name like concat("%", #{query}, "%")
-				)
-			</if>
-			<if test="userType!=null">
-				AND u.type = #{userType}
-			</if>
-			LIMIT #{start},#{limit}
-	</select>
 	
 	<select id="findRolePermissionByUserId" resultType="UserRole">
-		SELECT <include refid="userRoleSql"/> FROM user_role_t ur where ur.is_deleted = 0 
-			and ur.user_id = #{userId}
-	</select>
-	
-	<select id="findOrgIdsByUserId" resultType="java.lang.Long">
-		select ur.ref_id
-		from user_role_t ur 
-		where ur.is_deleted = 0 
-		and ur.type = 1
-		and ur.user_id = #{userId}
-	</select>
-
-	<update id="removeUserRoleById">
-		UPDATE user_role_t
-			SET
-				is_deleted=1
-			WHERE id=#{id}
-	</update>
-	
-	<update id="removeUserRoleByUserIdAndRoleId">
-		UPDATE user_role_t
-			SET
-				is_deleted=1
-			WHERE user_id=#{userId}
-				AND type = 0
-				AND ref_id =#{roleId};
-	</update>
-	
-	<select id="getUserByUserIdAndOrgId" resultType="UserRole">
-		select <include refid="userRoleSql" /> 
-		from user_role_t ur
-		where ur.is_deleted = 0 
-		and ur.type = #{type} 
-		and ur.ref_id = #{orgId} 
-		and ur.user_id = #{userId}
-	</select>
-	
-	<select id="countUserRoleByUserIdAndSchoolId" resultType="java.lang.Integer">
-		select count(1) from user_role_t 
-		where   type = 1 and is_deleted = 0 
-			and user_id = #{userId} and ref_id = #{refId} 
-			<if test="schoolId !=null and schoolId !=''">
-				and school_t = #{schoolId}
+		SELECT <include refid="userRoleSql"/> FROM user_role_t ur 
+			where ur.is_deleted = 0 
+			<if test="userId !=null">
+				and ur.user_id = #{userId}
+			</if>
+			<if test="roleId !=null">
+				and ur.ref_id = #{roleId}
 			</if>
 	</select>
-	
-	<update id="removeUserOragByUserId">
-		UPDATE user_role_t
-			SET
-				is_deleted=1
-			WHERE user_id=#{userId}
-				AND type = 1
-	</update>
-	
-	<select id="findUserIdsByOrg" resultType="UserRole">
-		SELECT <include refid="userRoleSql"/> FROM user_role_t ur where ur.is_deleted = 0 
-			and type =1 AND ref_id =#{orgId};
-	</select>
-	
-	<update id="delUserRoleByOrgByUserId">
-		UPDATE user_role_t
-			SET
-				is_deleted=#{isDeleted}
-			WHERE user_id=#{userId}
-				AND type = 1
-				AND ref_id =#{refId};
-	</update>
-	
-	<update id="delOrgUserRoleByUserId">
-		UPDATE user_role_t
-			SET
-				ref_id = #{refId}
-			WHERE user_id=#{userId}
-				AND type = 1
-			<if test="refId !=null">
-				AND ref_id =#{refId};
-			</if>
-	</update>
-	
-	<update id="delUserRoleByOrgId">
-		UPDATE user_role_t
-			SET
-				is_deleted = 1
-			WHERE ref_id=#{orgId}
-	</update>
-
-
 	
 </mapper>

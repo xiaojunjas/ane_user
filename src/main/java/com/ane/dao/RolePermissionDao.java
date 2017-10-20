@@ -9,7 +9,7 @@ import com.ane.domain.RolePermission;
 @Mapper
 public interface RolePermissionDao {
 
-	Long saveRolePermission(RolePermission rolePermission);
+//	Long saveRolePermission(RolePermission rolePermission);
 	
 	Integer saveRolePermissionBatch(@Param("list") List<RolePermission> list);
 	

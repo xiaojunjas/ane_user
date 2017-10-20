@@ -7,16 +7,7 @@
 		is_deleted isDeleted
 	</sql>
 	
-	<select id="getPermissionById" resultType="Permission">
-		SELECT 
-			<include refid="PermissionSQL" />
-		FROM role_t
-		WHERE 
-			is_deleted = 0
-			AND id = #{id} 
-	</select>
-	
-	<select id="findPermissionsByPId" resultType="Permission">
+	 <select id="findPermissionsByPId" resultType="Permission">
 		SELECT 
 			<include refid="PermissionSQL" />
 		FROM permission_t
@@ -37,6 +28,6 @@
 			<if test="path!=null and path!=''">
 				AND path LIKE #{path}
 			</if>
-			
 	</select>	
+	
 </mapper>
