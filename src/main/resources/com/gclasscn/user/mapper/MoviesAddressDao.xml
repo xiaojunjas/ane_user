@@ -53,9 +53,17 @@
 	</update>
 	
 	 <sql id="filmMoviesSql">
-		fm.film_id as filmId,
-		fm.movies_id as moviesId,
-	 	fm.is_deleted as isDeleted
+		 fm.film_id as filmId,
+		 fm.movies_id as moviesId,
+		 f.name as filmName,
+		 f.director,
+		 f.to_star,
+		 f.release_time,
+		 f.score,
+		 ma.name as moviesName,
+		 ma.address,
+		 ma.longitude,
+		 ma.latitude
 	 </sql>
 	
 	<select id="findFilmMoviesByMoviesId" resultType="MoviesFilm">
