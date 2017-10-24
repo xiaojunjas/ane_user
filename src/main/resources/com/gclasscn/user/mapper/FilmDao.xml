@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ane.dao.FilmDao">
+
+	 <sql id="filmSql">
+		f.id,
+		f.name,
+		f.director,
+		f.to_star as toStar,
+		f.release_time as releaseTime,
+		f.score,
+	 	f.is_deleted as isDeleted
+	 </sql>
+	  
+	<select id="getFilmById" resultType="Film">
+		select <include refid="filmSql" /> from film_t f where id = #{filmId}
+	</select>
+	
+	<insert id="createFilm">
+		insert into film_t (name,director,to_star,release_time,is_deleted) 
+			values
+			(#{name},#{director},#{toStar},#{releaseTime},0)
+	</insert>
+	 
+	<select id="listFilm" resultType="Film">
+		select <include refid="filmSql" /> from film_t f where f.is_deleted = 0 
+		<if test="query != null and query !=''">
+		  and (
+				f.name like concat("%", #{query}, "%")
+			 )
+		</if>
+		<if test="start != null and limit !=null">
+			limit #{start}, #{limit}
+		</if>
+	</select>
+	
+	<select id="countFilm" resultType="java.lang.Integer">
+		select count(1) from film_t f where f.is_deleted = 0
+		<if test="query != null and query !=''">
+		  and (
+				m.name like concat("%", #{query}, "%")
+			 )
+		</if>
+	</select>
+	
+	<update id="delFilmByFilmId">
+		update film_t set is_deleted = 1 where id = #{filmId} 
+	</update>
+	
+	<update id="editFilmByFilmId">
+		update film_t set 
+				name = #{name},
+				director = #{director},
+				to_star = #{toStar},
+				release_time = #{releaseTime}
+		where
+				id = #{id}
+	</update>
+	
+</mapper>
+

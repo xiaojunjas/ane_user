@@ -6,6 +6,8 @@
 		m.id,
 		m.name,
 		m.address,
+		m.longitude,
+		m.latitude,
 	 	m.is_deleted as isDeleted
 	 </sql>
 	  
@@ -24,7 +26,9 @@
 				m.name like concat("%", #{query}, "%")
 			 )
 		</if>
-		limit #{start}, #{limit}
+		<if test="start != null and limit !=null">
+			limit #{start}, #{limit}
+		</if>
 	</select>
 	
 	<select id="countMoviesAddress" resultType="java.lang.Integer">
@@ -37,15 +41,50 @@
 	</select>
 	
 	<update id="delMoviesAddressByMoviesId">
-		update user_t set is_deleted = 1 where id = #{moviesId} 
+		update movies_address_t set is_deleted = 1 where id = #{moviesId} 
 	</update>
 	
 	<update id="editMoviesAddressByMoviesId">
-		update user_t set 
+		update movies_address_t set 
 				name = #{name},
 				address = #{address}
 		where
 				id = #{id}
+	</update>
+	
+	 <sql id="filmMoviesSql">
+		fm.film_id as filmId,
+		fm.movies_id as moviesId,
+	 	fm.is_deleted as isDeleted
+	 </sql>
+	
+	<select id="findFilmMoviesByMoviesId" resultType="MoviesFilm">
+		select <include refid="filmMoviesSql" /> 
+		 	 from film_movies_t fm 
+				left join film_t f on f.id = fm.film_id
+				left join movies_address_t ma on ma.id = fm.movies_id
+		where ma.is_deleted = 0 and f.is_deleted = 0 and fm.is_deleted = 0
+			<if test="moviesId !=null">
+				and fm.movies_id = #{moviesId}
+			</if>
+			<if test="filmId !=null">
+				and fm.film_id = #{filmId}
+			</if>
+	</select>
+	
+	<insert id="saveFilmMovies" >  
+		insert into film_movies_t(film_id, movies_id, is_deleted)
+			values
+			<foreach collection="filmMovies" item="etp" index="index" separator=",">
+				(#{etp.filmId}, #{etp.moviesId},0)
+			</foreach>
+	</insert>
+	
+	<update id="delFilmMoviesByMoviesId">
+		update film_movies_t set is_deleted = 1 where movies_id in
+		<foreach collection="delteaIds" item="moviesId" open="(" separator="," close=")">
+			#{moviesId}
+		</foreach>
 	</update>
 	
 </mapper>
