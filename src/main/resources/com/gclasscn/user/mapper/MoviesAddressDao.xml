@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ane.dao.MoviesAddressDao">
+
+	 <sql id="moviesAddressSql">
+		m.id,
+		m.name,
+		m.address,
+	 	m.is_deleted as isDeleted
+	 </sql>
+	  
+	<select id="getMoviesAddressById" resultType="MoviesAddress">
+		select <include refid="moviesAddressSql" /> from movies_address_t m where id = #{moviesId}
+	</select>
+	
+	<insert id="createMoviesAddress">
+		insert into movies_address_t (name,address,is_deleted) values(#{name},#{address},0)
+	</insert>
+	 
+	<select id="listMoviesAddress" resultType="MoviesAddress">
+		select <include refid="moviesAddressSql" /> from movies_address_t m where m.is_deleted = 0 
+		<if test="query != null and query !=''">
+		  and (
+				m.name like concat("%", #{query}, "%")
+			 )
+		</if>
+		limit #{start}, #{limit}
+	</select>
+	
+	<select id="countMoviesAddress" resultType="java.lang.Integer">
+		select count(1) from movies_address_t m where m.is_deleted = 0
+		<if test="query != null and query !=''">
+		  and (
+				m.name like concat("%", #{query}, "%")
+			 )
+		</if>
+	</select>
+	
+	<update id="delMoviesAddressByMoviesId">
+		update user_t set is_deleted = 1 where id = #{moviesId} 
+	</update>
+	
+	<update id="editMoviesAddressByMoviesId">
+		update user_t set 
+				name = #{name},
+				address = #{address}
+		where
+				id = #{id}
+	</update>
+	
+</mapper>
+
