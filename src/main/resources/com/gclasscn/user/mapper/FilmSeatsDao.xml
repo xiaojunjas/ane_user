@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ane.dao.FilmSeatsDao">
+
+	<sql id="filmSeatsSql">
+		fs.id,
+		fs.sell_ickets as sellIckets,
+		fs.film_id as filmId,
+		fs.user_id as userId
+	</sql>
+	
+	<select id="listFilmSeatsByfilmId" resultType="FilmSeats">
+		select <include refid="filmSeatsSql"/> from film_seats_t fs 
+		  where	fs.is_deleted = 0 
+		  	and fs.film_id = #{filmId} 
+		  <if test="userId !=null">
+		  	and fs.user_id = #{userId}
+		  </if>
+	</select>
+	
+	<insert id="createFilmSeats">
+		insert into film_seats_t (sell_ickets,film_id,user_id,is_deleted) 
+			values
+			<foreach collection="filmSeatss" item="etp" index="index" separator=",">
+				(#{etp.sellIckets}, #{etp.filmId}, #{etp.userId},0)
+			</foreach>
+	</insert>
+	 
+</mapper>
+

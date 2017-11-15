@@ -24,15 +24,42 @@ CREATE TABLE IF NOT EXISTS `film_movies_t` (
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='电影影院关系表';
 
--- 正在导出表  user.film_movies_t 的数据：~0 rows (大约)
+-- 正在导出表  user.film_movies_t 的数据：~14 rows (大约)
 /*!40000 ALTER TABLE `film_movies_t` DISABLE KEYS */;
 INSERT INTO `film_movies_t` (`id`, `film_id`, `movies_id`, `is_deleted`) VALUES
 	(13, 1, 1, 0),
 	(14, 2, 1, 0),
 	(15, 3, 1, 0),
 	(16, 1, 2, 0),
-	(17, 2, 2, 0);
+	(17, 2, 2, 0),
+	(18, 4, 1, 0),
+	(19, 5, 1, 0),
+	(20, 6, 1, 0),
+	(21, 7, 1, 0),
+	(22, 8, 1, 0),
+	(23, 9, 1, 0),
+	(24, 10, 1, 0),
+	(25, 11, 1, 0),
+	(26, 12, 1, 0);
 /*!40000 ALTER TABLE `film_movies_t` ENABLE KEYS */;
+
+-- 导出  表 user.film_seats_t 结构
+CREATE TABLE IF NOT EXISTS `film_seats_t` (
+  `id` bigint(20) NOT NULL auto_increment,
+  `sell_ickets` varchar(50) default NULL COMMENT '影院位置',
+  `film_id` bigint(20) default NULL COMMENT '电影id',
+  `user_id` bigint(20) default NULL COMMENT '用户id',
+  `is_deleted` int(2) default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='购票信息表';
+
+-- 正在导出表  user.film_seats_t 的数据：~3 rows (大约)
+/*!40000 ALTER TABLE `film_seats_t` DISABLE KEYS */;
+INSERT INTO `film_seats_t` (`id`, `sell_ickets`, `film_id`, `user_id`, `is_deleted`) VALUES
+	(1, '1_10', 1, 1, 0),
+	(2, '1_9', 1, 1, 0),
+	(3, '1_8', 1, 1, 0);
+/*!40000 ALTER TABLE `film_seats_t` ENABLE KEYS */;
 
 -- 导出  表 user.film_t 结构
 CREATE TABLE IF NOT EXISTS `film_t` (
@@ -198,7 +225,7 @@ CREATE TABLE IF NOT EXISTS `user_t` (
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- 正在导出表  user.user_t 的数据：~4 rows (大约)
+-- 正在导出表  user.user_t 的数据：~11 rows (大约)
 /*!40000 ALTER TABLE `user_t` DISABLE KEYS */;
 INSERT INTO `user_t` (`id`, `login_name`, `password`, `avatar`, `type`, `name`, `telephone`, `status`, `create_time`, `is_deleted`) VALUES
 	(1, 'admin', '$2a$10$6LZEa1NVFMCQsifldN0wm.KLUyMpVq9MUzCcxc3EdewFsmYJm0KCy', NULL, NULL, NULL, '男', NULL, NULL, 0),
